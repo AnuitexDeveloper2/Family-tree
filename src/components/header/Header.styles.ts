@@ -7,7 +7,7 @@ export const HeaderLayout = styled('header')`
     padding: 23px 100px 24px 100px;
     line-height: 18px;
     background-color: ${grayLight01};
-    min-width: 1224px;
+    width: 2500px;
     a {
         color: ${teal01};
         &:hover {

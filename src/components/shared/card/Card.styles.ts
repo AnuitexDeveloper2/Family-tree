@@ -1,24 +1,26 @@
 import styled from 'styled-components'
 
-export const CardContainer = styled('div')`
-    width: 400px;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.0.75), 0 2px 2px hsl(0deg 0% 0% / 0.0.75), 0 4px 4px hsl(0deg 0% 0% / 0.0.75), 0 8px 8px 
-    hsl(0deg 0% 0% / 0.0.75), 0 16px 16px, hsl(0deg 0% 0% / 0.0.75);
-    position: absolute;
-    background-color: antiquewhite;
-`
+export const CardContainer = styled.div.withConfig({
+    shouldForwardProp: (prop) => !["margin"].includes(prop),
+}) <{
+    margin?: string;
+    opacity?: string;
+}>`
+  background: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 120px;
+  min-width: 120px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: ${({ margin }) => margin || "0 20px"};
+  opacity: ${({ opacity }) => opacity || 1};
+`;
 
-export const CardHeader = styled('div')`
-    width: 100%;
-    min-height: 20px;
-    background-color: inherit;
-    opacity: 0.5;
-    border-bottom: 1px solid black;
-`
-
-export const CardBody = styled('div')`
-    padding: 1em;
-    border-radius: 0 0 5px 5px;
-`
+export const MemberName = styled.div`
+    white-space: nowrap;
+    overflow: hidden;
+`;
