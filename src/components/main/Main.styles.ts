@@ -6,14 +6,14 @@ export const Container = styled.div<{ scale: number }>`
 `;
 
 export const Generation = styled.div`
-display: flex;
+  display: flex;
   justify-content: center;
   align-items: flex-start;
   position: relative;
-  margin-top: 50px;
+  margin-top: 100px;
   transform-origin: center top;
   transition: transform 0.1s ease-out;
-  min-width: 2500px;
+  min-width: 6500px;
 `;
 
 export const Dot = styled.div`

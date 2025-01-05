@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'DINNextLTPro';
+  src: local('fonts'), url(./assets/fonts/DINNextLTPro-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: local('fonts'), url(./assets/fonts/proximanova-regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Proxima N W15 Bold';
+  src: local('fonts'), url(./assets/fonts/proximanova-bold-tc.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Proxima N W15 Smbd';
+  src: local('fonts'), url(./assets/fonts/proximanova-semibold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'DINNextLTPro-Bold';
+  src: local('fonts'), url(./assets/fonts/DINNextLTPro-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'DIN Next W01 Regular';
+  src: local('fonts'), url(./assets/fonts/dinnextltpro-regular-webfont.woff);
+}
+
+@font-face {
+  font-family: 'DIN Next W01 Medium';
+  src: local('fonts'), url(./assets/fonts/dinnextltpro-medium-webfont.woff);
+}
