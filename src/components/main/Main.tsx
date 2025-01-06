@@ -67,7 +67,7 @@ const Family = () => {
                             }}
                         />
                     </Card>
-                    <Card name="Антон Филлипович Тринда" years="1871-1926">
+                    <Card name="Антон Филлипович Тринда" years="1861-1926">
                         <VerticalLine
                             style={{
                                 left: "50%",
@@ -95,8 +95,8 @@ const Family = () => {
                     <Card name="Ольга Ивановна Тринда" years="1870-1950">
                         <HorizontalLine
                             style={{
-                                width: "1992px",
-                                left: "-1160px",
+                                width: "2273px",
+                                left: "-1300px",
                                 bottom: "-72px",
                             }}
                         />
@@ -132,8 +132,8 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "1560px",
-                                left: "-1440px",
+                                width: "3410px",
+                                left: "-3288px",
                                 bottom: "-32px  ",
                             }}
                         />
@@ -149,8 +149,8 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "2558px",
-                                left: "-875px",
+                                width: "2983px",
+                                left: "-2721px",
                                 bottom: "-72px",
                             }}
                         />
@@ -181,6 +181,21 @@ const Family = () => {
                                 transform: "translateX(-50%)",
                             }}
                         />
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                bottom: "-72px",
+                                height: "72px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                        <HorizontalLine
+                            style={{
+                                width: "569px",
+                                left: "-164px",
+                                bottom: "-72px",
+                            }}
+                        />
                     </Card>
                     <Card name="Михаил Антонович Тринда" years="1909-?">
                         <VerticalLine
@@ -191,6 +206,31 @@ const Family = () => {
                                 transform: "translateX(-50%)",
                             }}
                         />
+                        <VerticalLine
+                            style={{
+                                left: "262px",
+                                top: "50%",
+                                height: "132px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                        <HorizontalLine
+                            style={{
+                                width: "45px",
+                                left: "240px",
+                                top: "50%",
+                            }}
+                        />
+                        <HorizontalLine
+                            style={{
+                                width: "1562px",
+                                left: "261px",
+                                bottom: "-79px",
+                            }}
+                        />
+                    </Card>
+                    <Card name="Татьяна Тринда" years="?">
+
                     </Card>
                     <Card name="Иосиф Антонович Тринда" years="1911-?">
                         <VerticalLine
@@ -204,26 +244,16 @@ const Family = () => {
                         <VerticalLine
                             style={{
                                 left: "50%",
-                                bottom: "-32px",
-                                height: "32px",
+                                bottom: "-43px",
+                                height: "43px",
                                 transform: "translateX(-50%)",
                             }}
                         />
                         <HorizontalLine
                             style={{
-                                width: "843px",
+                                width: "1990px",
                                 left: "119px",
-                                bottom: "-34px",
-                            }}
-                        />
-                    </Card>
-                    <Card name="Николай Антонович Тринда" years="1924-?">
-                        <VerticalLine
-                            style={{
-                                left: "50%",
-                                top: "-32px",
-                                height: "32px",
-                                transform: "translateX(-50%)",
+                                bottom: "-46px",
                             }}
                         />
                     </Card>
@@ -246,9 +276,19 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "841px",
+                                width: "2273px",
                                 left: "120px",
                                 bottom: "-16px",
+                            }}
+                        />
+                    </Card>
+                    <Card name="Николай Антонович Тринда" years="1924-?">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-32px",
+                                height: "32px",
+                                transform: "translateX(-50%)",
                             }}
                         />
                     </Card>
@@ -293,6 +333,30 @@ const Family = () => {
                                 transform: "translateX(-50%)",
                             }}
                         />
+                        <HorizontalLine
+                            style={{
+                                width: "45px",
+                                left: "239px",
+                                bottom: "50%",
+                            }}
+                        />
+                        <VerticalLine
+                            style={{
+                                left: "263px",
+                                top: "50%",
+                                height: "127px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                        <HorizontalLine
+                            style={{
+                                width: "996px",
+                                left: "-733px",
+                                bottom: "-72px",
+                            }}
+                        />
+                    </Card>
+                    <Card name="Иван Игнатьевич Реут" years="1918-?">
                     </Card>
                     <Card name="Валентина Иосифовна Гончарук" years="1930-2005">
                         <VerticalLine
@@ -316,6 +380,13 @@ const Family = () => {
                                 top: "50%",
                                 height: "127px",
                                 transform: "translateX(-50%)",
+                            }}
+                        />
+                        <HorizontalLine
+                            style={{
+                                width: "286px",
+                                left: "119px",
+                                bottom: "-74px",
                             }}
                         />
                     </Card>
@@ -361,7 +432,7 @@ const Family = () => {
                             style={{
                                 right: "-22px",
                                 top: "50%",
-                                height: "129px",
+                                height: "89px",
                                 transform: "translateX(-50%)",
                             }}
                         />
@@ -405,12 +476,103 @@ const Family = () => {
                             }}
                         />
                     </Card>
+                    <Card name="Антон Туркиневич" years="?-?">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-32px",
+                                height: "32px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                    </Card>
+                    <Card name="Иван Туркиневич" years="?-?">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-32px",
+                                height: "32px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                    </Card>
+                    <Card name="Мария Туркиневич" years="?-?">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-32px",
+                                height: "32px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                    </Card>
+                    <Card name="Вячеслав">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-27px",
+                                height: "27px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                    </Card>
+                    <Card name="Борис">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-27px",
+                                height: "27px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                    </Card>
+                    <Card name="Георгий">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-27px",
+                                height: "27px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                    </Card>
+                    <Card name="Евгений">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-27px",
+                                height: "27px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                    </Card>
+                    <Card name="Анна">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-27px",
+                                height: "27px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                    </Card>
+                    <Card name="Леонид">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-27px",
+                                height: "27px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                    </Card>
+
                     <Card name="Нина Иосифовна Тринда">
                         <VerticalLine
                             style={{
                                 left: "50%",
-                                top: "-71px",
-                                height: "71px",
+                                top: "-59px",
+                                height: "59px",
                                 transform: "translateX(-50%)",
                             }}
                         />
@@ -419,8 +581,8 @@ const Family = () => {
                         <VerticalLine
                             style={{
                                 left: "50%",
-                                top: "-71px",
-                                height: "71px",
+                                top: "-59px",
+                                height: "59px",
                                 transform: "translateX(-50%)",
                             }}
                         />
@@ -429,8 +591,8 @@ const Family = () => {
                         <VerticalLine
                             style={{
                                 left: "50%",
-                                top: "-72px",
-                                height: "73px",
+                                top: "-59px",
+                                height: "59px",
                                 transform: "translateX(-50%)",
                             }}
                         />
@@ -439,8 +601,8 @@ const Family = () => {
                         <VerticalLine
                             style={{
                                 left: "50%",
-                                top: "-91px",
-                                height: "90px",
+                                top: "-89px",
+                                height: "89px",
                                 transform: "translateX(-50%)",
                             }}
                         />
@@ -449,17 +611,137 @@ const Family = () => {
                         <VerticalLine
                             style={{
                                 left: "50%",
-                                top: "-91px",
-                                height: "90px",
+                                top: "-89px",
+                                height: "89px",
                                 transform: "translateX(-50%)",
                             }}
                         />
                     </Card>
                     <Card opacity="0" name="">
                     </Card>
+                    <Card opacity="0" name="">
+                    </Card>
+                    <Card opacity={"0"} name="">
+                    </Card>
+                    <Card opacity="0" name="">
+                    </Card>
+                    <Card opacity={"0"} name="">
+                    </Card>
                 </Generation>
                 <Generation>
-                    <Card name="Людмила Воловикова" years="1960">
+                    <Card name="Зоя Ивановна Реут" years="1946">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-31px",
+                                height: "30px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                        <HorizontalLine
+                            style={{
+                                width: "45px",
+                                left: "240px",
+                                top: "50%",
+                            }}
+                        />
+                        <VerticalLine
+                            style={{
+                                left: "262px",
+                                top: "50%",
+                                height: "129px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                        <HorizontalLine
+                            style={{
+                                width: "567px",
+                                left: "-303px",
+                                bottom: "-74px",
+                            }}
+                        />
+                    </Card>
+                    <Card name="" years="">
+                    </Card>
+                    <Card name="Раиса Ивановна Реут" years="1956">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-31px",
+                                height: "30px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                        <HorizontalLine
+                            style={{
+                                width: "45px",
+                                left: "240px",
+                                top: "50%",
+                            }}
+                        />
+                        <VerticalLine
+                            style={{
+                                left: "262px",
+                                top: "50%",
+                                height: "129px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                        <HorizontalLine
+                            style={{
+                                width: "570px",
+                                left: "-23px",
+                                bottom: "-74px",
+                            }}
+                        />
+                    </Card>
+                    <Card name="Михаил" years="">
+
+                    </Card>
+                    <Card name="Людмила Даниловна Гук" years="1954">
+
+                        <HorizontalLine
+                            style={{
+                                width: "45px",
+                                left: "240px",
+                                top: "50%",
+                            }}
+                        />
+                        <VerticalLine
+                            style={{
+                                left: "262px",
+                                top: "50%",
+                                height: "129px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                        <HorizontalLine
+                            style={{
+                                width: "853px",
+                                left: "262px",
+                                top: "182px",
+                            }}
+                        />
+                    </Card>
+                    <Card name="Николай Владимирович Гончарук" years="1954">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-30px",
+                                height: "30px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                    </Card>
+                    <Card name="Василий Владимирович Гончарук" years="1955-2024">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-30px",
+                                height: "30px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
                         <HorizontalLine
                             style={{
                                 width: "45px",
@@ -479,13 +761,6 @@ const Family = () => {
                     <Card name="Лидия Васильевна Гончарук" years="1960">
                         <HorizontalLine
                             style={{
-                                width: "285px",
-                                left: "403px",
-                                top: "-31px",
-                            }}
-                        />
-                        <HorizontalLine
-                            style={{
                                 width: "45px",
                                 left: "240px",
                                 top: "50%",
@@ -500,49 +775,7 @@ const Family = () => {
                             }}
                         />
                     </Card>
-                    <Card name="Василий Владимирович Гончарук" years="1955-2024">
-                        <VerticalLine
-                            style={{
-                                left: "50%",
-                                top: "-30px",
-                                height: "30px",
-                                transform: "translateX(-50%)",
-                            }}
-                        />
-                    </Card>
-                    <Card name="Николай Владимирович Гончарук" years="1954">
-                        <VerticalLine
-                            style={{
-                                left: "50%",
-                                top: "-30px",
-                                height: "30px",
-                                transform: "translateX(-50%)",
-                            }}
-                        />
-                        <HorizontalLine
-                            style={{
-                                width: "45px",
-                                left: "240px",
-                                top: "50%",
-                            }}
-                        />
-                        <VerticalLine
-                            style={{
-                                left: "260px",
-                                top: "50%",
-                                height: "129px",
-                                transform: "translateX(-50%)",
-                            }}
-                        />
-                        <HorizontalLine
-                            style={{
-                                width: "570px",
-                                left: "119px",
-                                top: "182px",
-                            }}
-                        />
-                    </Card>
-                    <Card name="Людмила Даниловна Гук" years="1954">
+                    <Card name="Людмила Воловикова" years="1960-?">
                     </Card>
                     <Card name="Андрей Аркадьевич Пшеницин" years="1961">
                         <VerticalLine
@@ -555,8 +788,8 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "522px",
-                                left: "118px",
+                                width: "947px",
+                                left: "-307px",
                                 top: "-30px",
                             }}
                         />
@@ -604,7 +837,7 @@ const Family = () => {
                             }}
                         />
                     </Card>
-                    <Card name="Анна Валерьивна Лисовская" years="1972">
+                    <Card name="Анна Валерьевна Лисовская" years="1972">
                         <HorizontalLine
                             style={{
                                 width: "40px",
@@ -615,8 +848,8 @@ const Family = () => {
                         <VerticalLine
                             style={{
                                 left: "50%",
-                                top: "-31px",
-                                height: "31px",
+                                top: "-69px",
+                                height: "68px",
                                 transform: "translateX(-50%)",
                             }}
                         />
@@ -624,14 +857,69 @@ const Family = () => {
                     <Card name="Дмитрий Эпштейн" years="1972">
                         <HorizontalLine
                             style={{
-                                width: "1006px",
-                                left: "-601px",
-                                top: "-32px",
+                                width: "1566px",
+                                left: "-1161px",
+                                top: "-70px",
                             }}
                         />
 
                     </Card>
                     <Card name="Лариса Валерьивна Лисовская">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-69px",
+                                height: "68px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                    </Card>
+                    <Card opacity="0" name="">
+                    </Card>
+                    <Card opacity={"0"} name="">
+                    </Card>
+                    <Card opacity={"0"} name="">
+                    </Card>
+                    <Card opacity={"0"} name="">
+                    </Card>
+                    <Card opacity={"0"} name="">
+                    </Card>
+                    <Card opacity={"0"} name="">
+                    </Card>
+                    <Card opacity={"0"} name="">
+                    </Card>
+                    <Card opacity="0" name="">
+                    </Card>
+                    <Card opacity={"0"} name="">
+                    </Card>
+                    <Card opacity="0" name="">
+                    </Card>
+                    <Card opacity={"0"} name="">
+                    </Card>
+                    <Card opacity="0" name="">
+                    </Card>
+                    <Card opacity={"0"} name="">
+                    </Card>
+                    <Card opacity="0" name="">
+                    </Card>
+                    <Card opacity={"0"} name="">
+                    </Card>
+                    <Card opacity="0" name="">
+                    </Card>
+                    <Card opacity={"0"} name="">
+                    </Card>
+                </Generation>
+                <Generation>
+                    <Card name="" years="">
+                        <HorizontalLine
+                            style={{
+                                width: "45px",
+                                left: "240px",
+                                top: "50%",
+                            }}
+                        />
+                    </Card>
+                    <Card name="Виталий" years="1965">
                         <VerticalLine
                             style={{
                                 left: "50%",
@@ -641,24 +929,86 @@ const Family = () => {
                             }}
                         />
                     </Card>
-                    <Card opacity="0" name="">
+                    <Card name="" years="">
+                        <HorizontalLine
+                            style={{
+                                width: "45px",
+                                left: "240px",
+                                top: "50%",
+                            }}
+                        />
                     </Card>
-                    <Card opacity="0" name="">
+                    <Card name="Дмитрий" years="1973">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-31px",
+                                height: "30px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
                     </Card>
-                    <Card opacity={"0"} name="">
+                    <Card name="Валерия Михайловна">
+                        <HorizontalLine
+                            style={{
+                                width: "45px",
+                                left: "240px",
+                                top: "50%",
+                            }}
+                        />
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-31px",
+                                height: "30px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
                     </Card>
-                    <Card opacity={"0"} name="">
+                    <Card name="">
                     </Card>
-                    <Card opacity={"0"} name="">
+                    <Card name="Александр Михайлович">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-31px",
+                                height: "30px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
                     </Card>
-                    <Card opacity={"0"} name="">
+                    <Card name="Александр Николаевич Гончарук" years="1978">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-30px",
+                                height: "30px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                        <HorizontalLine
+                            style={{
+                                width: "45px",
+                                left: "240px",
+                                top: "50%",
+                            }}
+                        />
                     </Card>
-                    <Card opacity={"0"} name="">
+                    <Card name="Алла Владимировна Черевань">
                     </Card>
-                    <Card opacity={"0"} name="">
+                    <Card name="Яна Владимировна Гончарук">
+                        {/* Дети Сын(2014) и дочь(2015) */}
                     </Card>
-                </Generation>
-                <Generation>
+                    <Card name="Дарья Васильевна Гончарук" years="1988">
+                        <VerticalLine
+                            style={{
+                                left: "50%",
+                                top: "-30px",
+                                height: "30px",
+                                transform: "translateX(-50%)",
+                            }}
+                        />
+                    </Card>
                     <Card name="Сергей Васильевич Гончарук" years="1977">
                         <VerticalLine
                             style={{
@@ -670,7 +1020,7 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "1707px",
+                                width: "1990px",
                                 left: "119px",
                                 top: "-32px",
                             }}
@@ -748,38 +1098,7 @@ const Family = () => {
                             }}
                         />
                     </Card>
-                    <Card name="Александр Николаевич Гончарук" years="1978">
-                        <VerticalLine
-                            style={{
-                                left: "50%",
-                                top: "-30px",
-                                height: "30px",
-                                transform: "translateX(-50%)",
-                            }}
-                        />
-                        <HorizontalLine
-                            style={{
-                                width: "45px",
-                                left: "240px",
-                                top: "50%",
-                            }}
-                        />
-                    </Card>
-                    <Card name="Алла Владимировна Черевань">
-                    </Card>
-                    <Card name="Яна Владимировна Гончарук">
-                        {/* Дети Сын(2014) и дочь(2015) */}
-                    </Card>
-                    <Card name="Дарья Васильевна Гончарук" years="1988">
-                        <VerticalLine
-                            style={{
-                                left: "50%",
-                                top: "-30px",
-                                height: "30px",
-                                transform: "translateX(-50%)",
-                            }}
-                        />
-                    </Card>
+                   
                     <Card opacity={"0"} name="">
                     </Card>
                     <Card name="Елисей Пшеницин" years="2004">
@@ -813,6 +1132,12 @@ const Family = () => {
                     <Card opacity="0" name="">
                     </Card>
                     <Card opacity="0" name="">
+                    </Card>
+                    <Card opacity={"0"} name="">
+                    </Card>
+                    <Card opacity={"0"} name="">
+                    </Card>
+                    <Card opacity={"0"} name="">
                     </Card>
                     <Card opacity={"0"} name="">
                     </Card>
