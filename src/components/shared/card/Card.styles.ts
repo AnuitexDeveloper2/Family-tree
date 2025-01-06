@@ -23,6 +23,18 @@ export const CardContainer = styled.div.withConfig({
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
+    &:hover {
+    animation: blinking-shadow 1s infinite;
+  }
+  @keyframes blinking-shadow {
+    0%, 100% {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+  }
 `;
 
 export const MemberName = styled.div`
@@ -33,7 +45,7 @@ export const MemberName = styled.div`
     color: ${grayDark01};
 `;
 
-export  const Years = styled.div`
+export const Years = styled.div`
     font-family: Proxima N W15 Smbd, Arial, Helvetica Neue, Helvetica, sans-serif !important;
     letter-spacing: 0.4cap;
     color: ${blueDark02};
