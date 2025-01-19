@@ -40,4 +40,4 @@ export const VerticalLine = styled(Line)`
 export const HorizontalLine = styled(Line)`
   height: 2px;
   z-index: 100;
-`;
+`;0
