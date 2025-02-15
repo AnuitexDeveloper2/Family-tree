@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { blueDark01, blueDark02, grayDark01 } from '../../../styles/colors';
+import { blueDark02, grayDark01 } from '../../../styles/colors';
 
 export const CardContainer = styled.div.withConfig({
     shouldForwardProp: (prop) => !["margin"].includes(prop),

@@ -1,36 +1,45 @@
 import styled, { keyframes } from "styled-components";
 
-export const slideDown = keyframes`
+export const slideIn = keyframes`
   from {
-    transform: translateY(-100%);
+    transform: translateX(100%);
   }
   to {
-    transform: translateY(0);
+    transform: translateX(0);
+  }
+`;
+
+export const slideOut = keyframes`
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
   }
 `;
 
 export const ModalOverlay = styled.div`
-  position: fixed;
+  position: fixed; /* Фиксируем относительно экрана */
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  width: 400px; /* Ширина сайдбара */
+  height: 100vh; /* Растягиваем на всю высоту */
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
 `;
 
-export const ModalContent = styled.div`
+export const ModalContent = styled.div<{ isOpen: boolean }>`
   width: 100%;
   height: 100%;
   background: #fff;
-  animation: ${slideDown} 0.5s ease-out forwards;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   padding: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  animation: ${({ isOpen }) => (isOpen ? slideIn : slideOut)} 0.3s ease-out forwards;
 `;
 
 export const CloseButton = styled.button`

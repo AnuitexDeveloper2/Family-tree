@@ -1,7 +1,9 @@
-import React, { FC, useRef } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import { CardContainer, MemberName, Years } from "./Card.styles";
 import { MemberDetail } from "../../memberDetail/MemberDetail";
-import { useModalState } from "../../../hooks/useModalState/useModalState";
+import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
+import { v4 as uuidv4 } from 'uuid';
+import { handleOpenMemberDetailPopup } from "../../../redux/reducers/memberDetailReducer/MemberDetailSlice";
 
 interface Props {
   name: string;
@@ -13,17 +15,22 @@ interface Props {
 
 const Card: FC<Props> = ({ name, margin, opacity, years, children }) => {
   const [firstName, lastName, surname] = name.split(" ");
-  const { isOpen, onOpen, onClose } = useModalState();
+  const { cardModalId } = useAppSelector(state => state.memberDetailSlice)
+  const [cardId, setCardId] = useState('')
+  useEffect(() => {
+    setCardId(uuidv4())
+  }, [])
+  const dispatch = useAppDispatch()
   const cardRef = useRef<HTMLDivElement>(null);
   const [modalPosition, setModalPosition] = React.useState({ top: 0, left: 0 });
-
   const handleOpen = () => {
     const rect = cardRef.current?.getBoundingClientRect();
     if (rect) {
       setModalPosition({ top: rect.top, left: rect.left });
     }
-    onOpen();
+    dispatch(handleOpenMemberDetailPopup(cardId));
   };
+  console.log(cardModalId);
 
   return (
     <>
@@ -38,11 +45,12 @@ const Card: FC<Props> = ({ name, margin, opacity, years, children }) => {
         {children}
         <Years>{years}</Years>
       </CardContainer>
-      {isOpen && (
+      {cardModalId === cardId && (
         <MemberDetail
-          isOpen={isOpen}
-          onClose={onClose}
-          position={modalPosition}
+          isOpen={cardModalId === cardId}
+          onClose={() => {
+            dispatch(handleOpenMemberDetailPopup(undefined))
+          }}
         />
       )}
     </>

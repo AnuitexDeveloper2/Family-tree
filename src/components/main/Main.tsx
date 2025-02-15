@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Container, Generation, VerticalLine, HorizontalLine } from "./Main.styles";
 import Card from "../shared/card/Card";
-import { MemberDetail } from "../memberDetail/MemberDetail";
-import { useModalState } from "../../hooks/useModalState/useModalState";
 
 const Family = () => {
     const [scale, setScale] = useState(0.5);

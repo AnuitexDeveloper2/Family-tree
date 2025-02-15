@@ -1,17 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import Header from './components/header/Header';
-import Card from './components/shared/card/Card';
 import Main from './components/main/Main';
+import { Provider } from 'react-redux';
+import { setupStore } from './redux/store';
 
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Main /> 
-    </div>
+    <Provider store={setupStore()}>
+      <div className="App">
+        <Header />
+        <Main />
+      </div>
+    </Provider>
   );
 }
 
