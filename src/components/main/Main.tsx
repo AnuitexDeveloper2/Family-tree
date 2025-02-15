@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Container, Generation, VerticalLine, HorizontalLine } from "./Main.styles";
 import Card from "../shared/card/Card";
 
 const Family = () => {
     const [scale, setScale] = useState(0.5);
-
+    const mainElement = useRef<HTMLDivElement>(null);
     useEffect(() => {
         const handleWheel = (e: WheelEvent) => {
             if (e.ctrlKey) {
@@ -22,27 +22,41 @@ const Family = () => {
         };
     }, []);
 
+    useEffect(() => {
+        if (mainElement.current) {
+          const rect = mainElement.current.getBoundingClientRect();
+          const absoluteY = window.scrollY + rect.top;
+          const absoluteX = window.scrollX + rect.left;
+          const middleY = absoluteY - window.innerHeight / 2 + rect.height / 2;
+          const middleX = absoluteX - window.innerWidth / 2 + rect.width / 2;
+    
+          window.scrollTo({ top: middleY, left: middleX, behavior: "smooth" });
+        }
+      }, []);
+
     return (
         <div style={{ position: "relative", marginBottom: "100px" }}>
             <Container scale={scale}>
                 <Generation>
-                    <Card name="Филлип Тринда">
-                        <VerticalLine
-                            style={{
-                                left: "50%",
-                                bottom: "-74px",
-                                height: "74px",
-                                transform: "translateX(-50%)",
-                            }}
-                        />
-                        <HorizontalLine
-                            style={{
-                                width: "1136px",
-                                left: "-448px",
-                                bottom: "-74px",
-                            }}
-                        />
-                    </Card>
+                    <div ref={mainElement}>
+                        <Card name="Филлип Тринда" id='1'>
+                            <VerticalLine
+                                style={{
+                                    left: "50%",
+                                    bottom: "-74px",
+                                    height: "74px",
+                                    transform: "translateX(-50%)",
+                                }}
+                            />
+                            <HorizontalLine
+                                style={{
+                                    width: "1136px",
+                                    left: "-448px",
+                                    bottom: "-74px",
+                                }}
+                            />
+                        </Card>
+                    </div>
                 </Generation>
                 <Generation>
                     <Card name="Федор Филлипович Тринда">

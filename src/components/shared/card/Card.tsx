@@ -11,9 +11,10 @@ interface Props {
   margin?: string;
   opacity?: string;
   years?: string;
+  id?: string
 }
 
-const Card: FC<Props> = ({ name, margin, opacity, years, children }) => {
+const Card: FC<Props> = ({ name, margin, opacity, years, id, children }) => {
   const [firstName, lastName, surname] = name.split(" ");
   const { cardModalId } = useAppSelector(state => state.memberDetailSlice)
   const [cardId, setCardId] = useState('')
@@ -38,6 +39,7 @@ const Card: FC<Props> = ({ name, margin, opacity, years, children }) => {
         margin={margin || ""}
         opacity={opacity || ""}
         onClick={handleOpen}
+        id={id}
       >
         <MemberName>{firstName}</MemberName>
         <MemberName>{`${lastName || ""} ${surname || ""}`}</MemberName>

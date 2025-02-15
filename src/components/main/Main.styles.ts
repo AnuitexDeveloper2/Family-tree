@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div<{ scale: number }>`
   transform: ${({ scale }) => `scale(${scale})`};
-  
 `;
 
 export const Generation = styled.div`

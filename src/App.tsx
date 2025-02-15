@@ -7,10 +7,9 @@ import { setupStore } from './redux/store';
 function App() {
   return (
     <Provider store={setupStore()}>
-      <div className="App">
-        <Header />
-        <Main />
-      </div>
+      <Header />
+      <div>Test</div>
+      <Main />
     </Provider>
   );
 }
