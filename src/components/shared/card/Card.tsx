@@ -22,7 +22,7 @@ const Card: FC<Props> = ({ name, margin, opacity, years, children }) => {
   }, [])
   const dispatch = useAppDispatch()
   const cardRef = useRef<HTMLDivElement>(null);
-  const [modalPosition, setModalPosition] = React.useState({ top: 0, left: 0 });
+  const [, setModalPosition] = React.useState({ top: 0, left: 0 });
   const handleOpen = () => {
     const rect = cardRef.current?.getBoundingClientRect();
     if (rect) {
