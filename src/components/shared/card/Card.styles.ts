@@ -2,11 +2,12 @@ import styled from 'styled-components'
 import { blueDark02, grayDark01 } from '../../../styles/colors';
 
 export const CardContainer = styled.div.withConfig({
-    shouldForwardProp: (prop) => !["margin"].includes(prop),
+  shouldForwardProp: (prop) => !["margin"].includes(prop),
 }) <{
-    margin?: string;
-    opacity?: string;
+  margin?: string;
+  opacity?: string;
 }>`
+  position: relative;
   background: #f9f9f9;
   border: 2px solid #ccc;
   border-radius: 10px;

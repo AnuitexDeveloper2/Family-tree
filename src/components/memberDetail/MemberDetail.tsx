@@ -1,19 +1,22 @@
 import React, { FC } from "react";
-import { CloseButton, ModalContent, ModalOverlay } from "./MemberDetail..styles";
+import { CloseButton, MemberDetailName, ModalContent, ModalOverlay } from "./MemberDetail..styles";
 
 interface Props {
   onClose: () => void;
   isOpen: boolean;
+  name: string;
 }
 
-export const MemberDetail: FC<Props> = ({ isOpen, onClose }) => {
+export const MemberDetail: FC<Props> = ({ isOpen, onClose, name }) => {
   if (!isOpen) return null;
 
   return (
     <ModalOverlay onClick={onClose}>
       <ModalContent isOpen={isOpen} onClick={(e) => e.stopPropagation()}>
         <CloseButton onClick={onClose}>&times;</CloseButton>
-        Hello
+        <MemberDetailName>
+          {name}
+        </MemberDetailName>
       </ModalContent>
     </ModalOverlay>
   );

@@ -30,7 +30,6 @@ const Card: FC<Props> = ({ name, margin, opacity, years, children }) => {
     }
     dispatch(handleOpenMemberDetailPopup(cardId));
   };
-  console.log(cardModalId);
 
   return (
     <>
@@ -44,15 +43,16 @@ const Card: FC<Props> = ({ name, margin, opacity, years, children }) => {
         <MemberName>{`${lastName || ""} ${surname || ""}`}</MemberName>
         {children}
         <Years>{years}</Years>
+        {cardModalId === cardId && (
+          <MemberDetail
+            isOpen={cardModalId === cardId}
+            name={name}
+            onClose={() => {
+              dispatch(handleOpenMemberDetailPopup(undefined))
+            }}
+          />
+        )}
       </CardContainer>
-      {cardModalId === cardId && (
-        <MemberDetail
-          isOpen={cardModalId === cardId}
-          onClose={() => {
-            dispatch(handleOpenMemberDetailPopup(undefined))
-          }}
-        />
-      )}
     </>
   );
 };

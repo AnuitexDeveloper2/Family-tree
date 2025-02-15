@@ -1121,7 +1121,7 @@ const Family = () => {
                             }}
                         />
                     </Card>
-                    <Card name="Виталий Бабешко">
+                    <Card name="Виталий Бабешко" years="1993">
                     </Card>
                     <Card name="Владимир Васильевич Гончарук" years="1988">
                         <VerticalLine
@@ -1299,7 +1299,7 @@ const Family = () => {
                             }}
                         />
                     </Card>
-                    <Card name="Артем Сергеевич Гончарук">
+                    <Card name="Артем Сергеевич Гончарук" years="2009">
                         <VerticalLine
                             style={{
                                 left: "50%",
@@ -1309,7 +1309,7 @@ const Family = () => {
                             }}
                         />
                     </Card>
-                    <Card name="Полина Сергеевна Гончарук">
+                    <Card name="Полина Сергеевна Гончарук" years="2012">
                         <VerticalLine
                             style={{
                                 left: "50%",
@@ -1331,7 +1331,7 @@ const Family = () => {
                     </Card>
                     <Card opacity={"0"} name="">
                     </Card>
-                    <Card name="Богдан Витальевич Бабешко">
+                    <Card name="Богдан Витальевич Бабешко" years="2020">
                         <VerticalLine
                             style={{
                                 left: "50%",

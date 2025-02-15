@@ -21,6 +21,7 @@ export const grayLight02 = '#E3E3E3';
 export const grayLight03 = '#EDEDED';
 export const grayLight04 = '#f2f2f2';
 export const grayLight05 = '#FAFAFA';
+export const grayLighter = "#f6f6f6";
 export const green = '#3DA100';
 export const greenLight = '#37760d';
 export const greenDark = '#2d6f01';
