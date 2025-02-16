@@ -109,8 +109,8 @@ const Family = () => {
                     <Card name="Ольга Ивановна Тринда" years="1870-1950">
                         <HorizontalLine
                             style={{
-                                width: "2260px",
-                                left: "-1293px",
+                                width: "2274px",
+                                left: "-1301px",
                                 bottom: "-72px",
                             }}
                         />
@@ -146,8 +146,8 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "3394px",
-                                left: "-3270px",
+                                width: "3411px",
+                                left: "-3288px",
                                 bottom: "-32px  ",
                             }}
                         />
@@ -1050,7 +1050,7 @@ const Family = () => {
                     <Card name="Яна Владимировна Гончарук">
 
                     </Card>
-                    <Card name="Дарья Васильевна Гончарук" years="1988">
+                    <Card name="Дарья Николаевна Гончарук" years="1988">
                         <VerticalLine
                             style={{
                                 left: "123px",
@@ -1347,7 +1347,7 @@ const Family = () => {
                     </Card>
                     <Card opacity={"0"} name="">
                     </Card>
-                    <Card name="Богдан Витальевич Бабешко" years="2020">
+                    <Card name="Богдан Витальевич Бабешко" years="2023">
                         <VerticalLine
                             style={{
                                 left: "50%",
