@@ -12,7 +12,7 @@ export const Generation = styled.div`
   margin-top: 100px;
   transform-origin: center top;
   transition: transform 0.1s ease-out;
-  min-width: 8500px;
+  min-width: 11500px;
 `;
 
 export const Dot = styled.div`

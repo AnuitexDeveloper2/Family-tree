@@ -24,13 +24,15 @@ const Family = () => {
 
     useEffect(() => {
         if (mainElement.current) {
-          const rect = mainElement.current.getBoundingClientRect();
-          const absoluteY = window.scrollY + rect.top;
-          const absoluteX = window.scrollX + rect.left;
-          const middleY = absoluteY - window.innerHeight / 2 + rect.height / 2;
-          const middleX = absoluteX - window.innerWidth / 2 + rect.width / 2;
-    
-          window.scrollTo({ top: middleY, left: middleX, behavior: "smooth" });
+          requestAnimationFrame(() => {
+            const rect = mainElement.current!.getBoundingClientRect();
+            const absoluteY = window.scrollY + rect.top;
+            const absoluteX = window.scrollX + rect.left;
+            const middleY = absoluteY - window.innerHeight / 2 + rect.height / 2;
+            const middleX = absoluteX - window.innerWidth / 2 + rect.width / 2;
+      
+            window.scrollTo({ top: middleY, left: middleX, behavior: "smooth" });
+          });
         }
       }, []);
 
@@ -50,9 +52,9 @@ const Family = () => {
                             />
                             <HorizontalLine
                                 style={{
-                                    width: "1136px",
-                                    left: "-448px",
-                                    bottom: "-74px",
+                                    width: "1132px",
+                                    left: "-446px",
+                                    bottom: "-71px",
                                 }}
                             />
                         </Card>
@@ -97,9 +99,9 @@ const Family = () => {
                         />
                         <VerticalLine
                             style={{
-                                left: "262px",
+                                left: "263px",
                                 top: "50%",
-                                height: "124px",
+                                height: "126px",
                                 transform: "translateX(-50%)",
                             }}
                         />
@@ -107,8 +109,8 @@ const Family = () => {
                     <Card name="Ольга Ивановна Тринда" years="1870-1950">
                         <HorizontalLine
                             style={{
-                                width: "2273px",
-                                left: "-1300px",
+                                width: "2260px",
+                                left: "-1293px",
                                 bottom: "-72px",
                             }}
                         />
@@ -144,8 +146,8 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "3410px",
-                                left: "-3288px",
+                                width: "3394px",
+                                left: "-3270px",
                                 bottom: "-32px  ",
                             }}
                         />
@@ -161,8 +163,8 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "2983px",
-                                left: "-2721px",
+                                width: "2966px",
+                                left: "-2705px",
                                 bottom: "-72px",
                             }}
                         />
@@ -203,8 +205,8 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "569px",
-                                left: "-164px",
+                                width: "567px",
+                                left: "-163px",
                                 bottom: "-72px",
                             }}
                         />
@@ -220,9 +222,9 @@ const Family = () => {
                         />
                         <VerticalLine
                             style={{
-                                left: "262px",
+                                left: "263px",
                                 top: "50%",
-                                height: "132px",
+                                height: "130px",
                                 transform: "translateX(-50%)",
                             }}
                         />
@@ -235,9 +237,9 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "1562px",
+                                width: "1555px",
                                 left: "261px",
-                                bottom: "-79px",
+                                bottom: "-76px",
                             }}
                         />
                     </Card>
@@ -256,14 +258,14 @@ const Family = () => {
                         <VerticalLine
                             style={{
                                 left: "50%",
-                                bottom: "-43px",
+                                bottom: "-44px",
                                 height: "43px",
                                 transform: "translateX(-50%)",
                             }}
                         />
                         <HorizontalLine
                             style={{
-                                width: "1707px",
+                                width: "1697px",
                                 left: "119px",
                                 bottom: "-46px",
                             }}
@@ -288,7 +290,7 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "2273px",
+                                width: "2261px",
                                 left: "120px",
                                 bottom: "-16px",
                             }}
@@ -310,8 +312,8 @@ const Family = () => {
                         <VerticalLine
                             style={{
                                 left: "50%",
-                                top: "-74px",
-                                height: "74px",
+                                top: "-73px",
+                                height: "73px",
                                 transform: "translateX(-50%)",
                             }}
                         />
@@ -320,8 +322,8 @@ const Family = () => {
                         <VerticalLine
                             style={{
                                 left: "50%",
-                                top: "-74px",
-                                height: "74px",
+                                top: "-73px",
+                                height: "73px",
                                 transform: "translateX(-50%)",
                             }}
                         />
@@ -330,8 +332,8 @@ const Family = () => {
                         <VerticalLine
                             style={{
                                 left: "50%",
-                                top: "-74px",
-                                height: "74px",
+                                top: "-73px",
+                                height: "73px",
                                 transform: "translateX(-50%)",
                             }}
                         />
@@ -362,8 +364,8 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "996px",
-                                left: "-733px",
+                                width: "990px",
+                                left: "-727px",
                                 bottom: "-72px",
                             }}
                         />
@@ -396,8 +398,8 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "286px",
-                                left: "119px",
+                                width: "284px",
+                                left: "120px",
                                 bottom: "-74px",
                             }}
                         />
@@ -417,7 +419,7 @@ const Family = () => {
                             style={{
                                 left: "260px",
                                 top: "50%",
-                                height: "131px",
+                                height: "130px",
                                 transform: "translateX(-50%)",
                             }}
                         />
@@ -603,8 +605,8 @@ const Family = () => {
                         <VerticalLine
                             style={{
                                 left: "50%",
-                                top: "-59px",
-                                height: "59px",
+                                top: "-86px",
+                                height: "86px",
                                 transform: "translateX(-50%)",
                             }}
                         />
@@ -693,17 +695,17 @@ const Family = () => {
                         />
                         <VerticalLine
                             style={{
-                                left: "262px",
+                                left: "263px",
                                 top: "50%",
-                                height: "129px",
+                                height: "128px",
                                 transform: "translateX(-50%)",
                             }}
                         />
                         <HorizontalLine
                             style={{
-                                width: "570px",
+                                width: "568px",
                                 left: "-23px",
-                                bottom: "-74px",
+                                bottom: "-72px",
                             }}
                         />
                     </Card>
@@ -721,7 +723,7 @@ const Family = () => {
                         />
                         <VerticalLine
                             style={{
-                                left: "262px",
+                                left: "260px",
                                 top: "50%",
                                 height: "129px",
                                 transform: "translateX(-50%)",
@@ -729,9 +731,9 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "853px",
-                                left: "262px",
-                                top: "182px",
+                                width: "851px",
+                                left: "261px",
+                                top: "183px",
                             }}
                         />
                     </Card>
@@ -780,7 +782,7 @@ const Family = () => {
                         />
                         <VerticalLine
                             style={{
-                                right: "-25px",
+                                right: "-26px",
                                 top: "50%",
                                 height: "129px",
                                 transform: "translateX(-50%)",
@@ -800,8 +802,8 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "947px",
-                                left: "-307px",
+                                width: "990px",
+                                left: "-305px",
                                 top: "-30px",
                             }}
                         />
@@ -818,7 +820,7 @@ const Family = () => {
                     <Card name="Елизавета Аркадьевна Пшеницина" years="1975">
                         <VerticalLine
                             style={{
-                                left: "30%",
+                                left: "50%",
                                 top: "-30px",
                                 height: "30px",
                                 transform: "translateX(-50%)",
@@ -834,7 +836,7 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "1557px",
+                                width: "1550px",
                                 left: "260px",
                                 top: "154px",
                             }}
@@ -869,8 +871,8 @@ const Family = () => {
                     <Card name="Дмитрий Эпштейн" years="1972">
                         <HorizontalLine
                             style={{
-                                width: "1566px",
-                                left: "-1161px",
+                                width: "1557px",
+                                left: "-1153px",
                                 top: "-70px",
                             }}
                         />
@@ -978,7 +980,7 @@ const Family = () => {
                         />
                         <VerticalLine
                             style={{
-                                right: "-25px",
+                                right: "-22px",
                                 top: "50%",
                                 height: "130px",
                                 transform: "translateX(-50%)",
@@ -986,9 +988,9 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "286px",
+                                width: "284px",
                                 left: "261px",
-                                top: "182px",
+                                top: "183px",
                             }}
                         />
                     </Card>
@@ -1007,7 +1009,7 @@ const Family = () => {
                     <Card name="Александр Николаевич Гончарук" years="1978">
                         <VerticalLine
                             style={{
-                                left: "50%",
+                                left: "119px",
                                 top: "-30px",
                                 height: "30px",
                                 transform: "translateX(-50%)",
@@ -1051,7 +1053,7 @@ const Family = () => {
                     <Card name="Дарья Васильевна Гончарук" years="1988">
                         <VerticalLine
                             style={{
-                                left: "50%",
+                                left: "123px",
                                 top: "-30px",
                                 height: "30px",
                                 transform: "translateX(-50%)",
@@ -1069,7 +1071,7 @@ const Family = () => {
                         />
                         <HorizontalLine
                             style={{
-                                width: "1706px",
+                                width: "1697px",
                                 left: "119px",
                                 top: "-32px",
                             }}
@@ -1169,7 +1171,7 @@ const Family = () => {
                         <VerticalLine
                             style={{
                                 right: "-17px",
-                                top: "-60px",
+                                top: "-57px",
                                 height: "30px",
                                 transform: "translateX(-50%)",
                             }}
@@ -1250,7 +1252,7 @@ const Family = () => {
                     <Card name="Максим" years="2003">
                         <VerticalLine
                             style={{
-                                left: "50%",
+                                left: "119px",
                                 top: "-30px",
                                 height: "30px",
                                 transform: "translateX(-50%)",
