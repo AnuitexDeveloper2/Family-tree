@@ -19,15 +19,17 @@ export const slideOut = keyframes`
   }
 `;
 
-export const ModalOverlay = styled.div`
-  position: absolute;
+export const ModalOverlay = styled.div<{ isOpen: boolean }>`
+ position: fixed;
   top: 0;
-  right: 0;
-  width: 400px; 
-  height: 100vh; 
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  background-color: ${grayLighter};
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 `;
 
 export const ModalContent = styled.div<{ isOpen: boolean }>`

@@ -8,7 +8,6 @@ function App() {
   return (
     <Provider store={setupStore()}>
       <Header />
-      <div>Test</div>
       <Main />
     </Provider>
   );

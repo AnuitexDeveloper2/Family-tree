@@ -1,9 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { Container, Generation, VerticalLine, HorizontalLine } from "./Main.styles";
 import Card from "../shared/card/Card";
+import { useAppSelector } from "../../hooks/redux";
+import { MemberDetail } from "../memberDetail/MemberDetail";
 
 const Family = () => {
     const [scale, setScale] = useState(0.5);
+    const { cardModalId } = useAppSelector(state => state.memberDetailSlice)
     const mainElement = useRef<HTMLDivElement>(null);
     useEffect(() => {
         const handleWheel = (e: WheelEvent) => {
@@ -24,20 +27,23 @@ const Family = () => {
 
     useEffect(() => {
         if (mainElement.current) {
-          requestAnimationFrame(() => {
-            const rect = mainElement.current!.getBoundingClientRect();
-            const absoluteY = window.scrollY + rect.top;
-            const absoluteX = window.scrollX + rect.left;
-            const middleY = absoluteY - window.innerHeight / 2 + rect.height / 2;
-            const middleX = absoluteX - window.innerWidth / 2 + rect.width / 2;
-      
-            window.scrollTo({ top: middleY, left: middleX, behavior: "smooth" });
-          });
+            requestAnimationFrame(() => {
+                const rect = mainElement.current!.getBoundingClientRect();
+                const absoluteY = window.scrollY + rect.top;
+                const absoluteX = window.scrollX + rect.left;
+                const middleY = absoluteY - window.innerHeight / 2 + rect.height / 2;
+                const middleX = absoluteX - window.innerWidth / 2 + rect.width / 2;
+
+                window.scrollTo({ top: middleY, left: middleX, behavior: "smooth" });
+            });
         }
-      }, []);
+    }, []);
 
     return (
         <div style={{ position: "relative", marginBottom: "100px" }}>
+            {
+                cardModalId && <MemberDetail isOpen={!!cardModalId} />
+            }
             <Container scale={scale}>
                 <Generation>
                     <div ref={mainElement}>

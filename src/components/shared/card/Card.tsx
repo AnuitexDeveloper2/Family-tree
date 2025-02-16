@@ -25,10 +25,6 @@ const Card: FC<Props> = ({ name, margin, opacity, years, id, children }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [, setModalPosition] = React.useState({ top: 0, left: 0 });
   const handleOpen = () => {
-    const rect = cardRef.current?.getBoundingClientRect();
-    if (rect) {
-      setModalPosition({ top: rect.top, left: rect.left });
-    }
     dispatch(handleOpenMemberDetailPopup(cardId));
   };
 
@@ -45,15 +41,6 @@ const Card: FC<Props> = ({ name, margin, opacity, years, id, children }) => {
         <MemberName>{`${lastName || ""} ${surname || ""}`}</MemberName>
         {children}
         <Years>{years}</Years>
-        {cardModalId === cardId && (
-          <MemberDetail
-            isOpen={cardModalId === cardId}
-            name={name}
-            onClose={() => {
-              dispatch(handleOpenMemberDetailPopup(undefined))
-            }}
-          />
-        )}
       </CardContainer>
     </>
   );
