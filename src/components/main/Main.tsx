@@ -41,9 +41,6 @@ const Family = () => {
 
     return (
         <div style={{ position: "relative", marginBottom: "100px" }}>
-            {
-                cardModalId && <MemberDetail isOpen={!!cardModalId} />
-            }
             {!cardModalId && <Container scale={scale}>
                 <Generation>
                     <div ref={mainElement}>
