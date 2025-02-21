@@ -44,7 +44,7 @@ const Family = () => {
             {
                 cardModalId && <MemberDetail isOpen={!!cardModalId} />
             }
-            <Container scale={scale}>
+            {!cardModalId && <Container scale={scale}>
                 <Generation>
                     <div ref={mainElement}>
                         <Card name="Филлип Тринда" id='1'>
@@ -1406,7 +1406,7 @@ const Family = () => {
                     <Card opacity={"0"} name="">
                     </Card>
                 </Generation>
-            </Container>
+            </Container>}
         </div>
     );
 };

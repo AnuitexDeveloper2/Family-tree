@@ -33,7 +33,7 @@ export const ModalOverlay = styled.div<{ isOpen: boolean }>`
 `;
 
 export const ModalContent = styled.div<{ isOpen: boolean }>`
-  width: 1400px;
+  width: 100%;
   height: 100%;
   background: #fff;
   box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
