@@ -1328,7 +1328,7 @@ const Family = () => {
                             }}
                         />
                     </Card>
-                    <Card name="Полина Сергеевна Гончарук" years="2012">
+                    <Card name="Полина Сергеевна Гончарук" years="2013">
                         <VerticalLine
                             style={{
                                 left: "50%",

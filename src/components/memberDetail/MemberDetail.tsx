@@ -1,7 +1,8 @@
-import React, { FC } from "react";
-import { CloseButton, MemberDetailName, ModalContent, ModalOverlay } from "./MemberDetail..styles";
+import { FC } from "react";
+import { MemberDetailName } from "./MemberDetail.styles";
 import { useAppDispatch } from "../../hooks/redux";
 import { handleOpenMemberDetailPopup } from "../../redux/reducers/memberDetailReducer/MemberDetailSlice";
+import Modal from "../shared/modal/Modal";
 
 interface Props {
   isOpen: boolean;
@@ -14,13 +15,10 @@ export const MemberDetail: FC<Props> = ({ isOpen }) => {
     dispatch(handleOpenMemberDetailPopup(undefined));
   };
   return (
-    <ModalOverlay isOpen={isOpen} onClick={onClose}>
-      <ModalContent isOpen={isOpen} onClick={(e) => e.stopPropagation()}>
-        <CloseButton onClick={onClose}>&times;</CloseButton>
-        <MemberDetailName>
-          {"name"}
-        </MemberDetailName>
-      </ModalContent>
-    </ModalOverlay>
+    <Modal isOpen={isOpen} onClose={onClose}>
+      <MemberDetailName>
+        {"name"}
+      </MemberDetailName>
+    </Modal>
   );
 };

@@ -1,10 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { loadState, saveState } from './persistedState';
 import  memberDetailSlice  from './reducers/memberDetailReducer/MemberDetailSlice';
+import  authSlice  from './reducers/authReducer/AuthSlice';
 
 
 const rootReducer = combineReducers({
-    memberDetailSlice
+    memberDetailSlice,
+    authSlice
 });
 
 export const setupStore = () => {

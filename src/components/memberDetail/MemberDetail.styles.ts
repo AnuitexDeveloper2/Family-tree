@@ -20,7 +20,7 @@ export const slideOut = keyframes`
 `;
 
 export const ModalOverlay = styled.div<{ isOpen: boolean }>`
- position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;

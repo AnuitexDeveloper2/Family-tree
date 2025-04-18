@@ -25,3 +25,9 @@ export const ImportantDayContainer = styled('div')`
             opacity: 1;
         }
 `
+
+export const UserHeaderSection = styled('div')`
+    display: flex;
+    align-items: center;
+    gap: 16px;
+`
