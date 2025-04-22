@@ -1,18 +1,19 @@
-import { FC } from "react";
-import { InputWrapper, StyledInput, StyledLabel } from "./Input.styles";
+import { ChangeEvent, FC } from "react";
+import { ErrorMessage, InputWrapper, StyledInput, StyledLabel } from "./Input.styles";
 
 interface Props {
     name: string;
     type?: string;
     placeholder?: string;
     validation?: boolean;
-    errors?: Record<string, any>;
+    error?: string;
     isPasswordVisible?: boolean;
     label?: string;
+    onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 
-const Input: FC<Props> = ({ name, type, placeholder, validation, errors, isPasswordVisible, label }) => {
+const Input: FC<Props> = ({ name, type, placeholder, validation, error, isPasswordVisible, label, onChange }) => {
     return (
         <InputWrapper>
             {label && (
@@ -26,7 +27,9 @@ const Input: FC<Props> = ({ name, type, placeholder, validation, errors, isPassw
                 name={name}
                 type={type === 'password' && !isPasswordVisible ? 'password' : 'text'}
                 placeholder={placeholder}
+                onChange={onChange}
             />
+            {error && <ErrorMessage>{error}</ErrorMessage>}
         </InputWrapper>
     )
 }

@@ -3,12 +3,13 @@ import { HeaderLayout, ImportantDayContainer, UserHeaderSection } from "./Header
 import { CalendarOutlined, UserOutlined } from '@ant-design/icons'
 import { blueDark01 } from "../../styles/colors";
 import { Text } from '../../styles/common.styles'
-import { useAppDispatch } from "../../hooks/redux";
+import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { changeLoginModalState } from "../../redux/reducers/authReducer/AuthSlice";
 import Login from "../login/Login";
+import Register from "../register/Register";
 
 const Header: FC = () => {
-
+    const selector = useAppSelector(state => state.authSlice);
     const dispatch = useAppDispatch()
 
     return (
@@ -28,7 +29,8 @@ const Header: FC = () => {
                     </Text>
                 </ImportantDayContainer>
             </UserHeaderSection>
-            <Login />
+            {selector.isLoginModalOpen && <Login />}
+            {selector.isRegisterModalOpen && <Register />}
         </HeaderLayout>
     )
 }

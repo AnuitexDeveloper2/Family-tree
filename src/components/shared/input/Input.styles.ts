@@ -1,8 +1,10 @@
 import styled from 'styled-components';
-import { blue, blueDark03, error } from '../../../styles/colors';
+import { blue, blueDark03, error, red } from '../../../styles/colors';
 
 export const InputWrapper = styled.div`
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  position: relative;
 `;
 
 export const StyledLabel = styled.label`
@@ -37,3 +39,12 @@ export const StyledInput = styled.input<{ hasError: boolean }>`
     color: ${blue}4D; 
   }
 `;
+
+export const ErrorMessage = styled('span')`
+  font-size: 14px;
+  color: ${red};
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  white-space: nowrap;
+`

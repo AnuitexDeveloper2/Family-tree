@@ -31,3 +31,4 @@ export const orange02 = '#FF7F37';
 export const white = '#ffffff';
 export const error = '#990000';
 export const checkGreen = '#008000';
+export const red = "#e7473d";
