@@ -1,13 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { MemberCardDetail } from '../../../models/member/types';
 
 export interface MemberDetailType {
     cardModalId: string | undefined
-   pending: boolean;
+    pending: boolean;
+    memberDetail?: MemberCardDetail
 }
 
 const initialState: MemberDetailType = {
     cardModalId: undefined,
     pending: false,
+    memberDetail: undefined
 };
 
 export const memberDetailSlice = createSlice({
@@ -21,7 +24,8 @@ export const memberDetailSlice = createSlice({
             state = initialState;
         },
         handleOpenMemberDetailPopup(state, action) {
-            state.cardModalId = action.payload
+            state.cardModalId = action.payload?.id;
+            state.memberDetail = action.payload?.data;
         }
     },
     extraReducers: (builder) => { },

@@ -63,3 +63,13 @@ export const MemberDetailName = styled.div`
   color: ${blueDark01};
   font-family: Proxima N W15 Smbd, Arial, Helvetica Neue, Helvetica, sans-serif !important;
 `
+
+export const MemberDetailYears = styled.div`
+   display: flex;
+  justify-content: center;
+  font-size: 24px;
+  margin-top: 20px;
+  line-height: 12px;
+  color: ${blueDark01};
+  font-family: Proxima N W15 Smbd, Arial, Helvetica Neue, Helvetica, sans-serif !important;
+`

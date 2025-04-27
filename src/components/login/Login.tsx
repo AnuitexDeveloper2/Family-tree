@@ -1,4 +1,4 @@
-import { ChangeEvent, FC } from "react";
+import { ChangeEvent, FC, useState } from "react";
 import Modal from "../shared/modal/Modal";
 import { LoginInputContainer, LoginWrapper, RegisterButton } from "./Login.styles";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
@@ -11,6 +11,10 @@ const Login: FC = () => {
 
     const selector = useAppSelector(state => state.authSlice);
     const dispatch = useAppDispatch();
+    const [state, setState] = useState({
+        email: '',
+        password: ''
+    })
 
     const closeModal = () => {
         dispatch(changeLoginModalState(false))

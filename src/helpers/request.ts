@@ -21,7 +21,6 @@ export const http = <RESB, REQB>(
     let requestOptions: any = {
       method: config.method || "get",
       headers: {
-        "API-KEY": process.env.REACT_APP_PUBLIC_API_KEY || "",
         ...headers,
       },
     };
@@ -73,7 +72,7 @@ export const http = <RESB, REQB>(
           try {
             JSON.parse(body.message);
           } catch (error) { }
-          alertService.error(body.message.toString());
+          alertService.error(body.message.toString(), { fade: false });
           window.scrollTo(0, 0);
           reject(body.message);
         }

@@ -1,8 +1,6 @@
 import React, { FC, useEffect, useRef, useState } from "react";
 import { CardContainer, MemberName, Years } from "./Card.styles";
-import { MemberDetail } from "../../memberDetail/MemberDetail";
-import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
-import { v4 as uuidv4 } from 'uuid';
+import { useAppDispatch } from "../../../hooks/redux";
 import { handleOpenMemberDetailPopup } from "../../../redux/reducers/memberDetailReducer/MemberDetailSlice";
 
 interface Props {
@@ -15,17 +13,18 @@ interface Props {
 }
 
 const Card: FC<Props> = ({ name, margin, opacity, years, id, children }) => {
-  const [firstName, lastName, surname] = name.split(" ");
-  const { cardModalId } = useAppSelector(state => state.memberDetailSlice)
+  const [firstName, surname, lastName] = name.split(" ");
   const [cardId, setCardId] = useState('')
   useEffect(() => {
-    setCardId(uuidv4())
+    const cardId = `${firstName || ''}${lastName || ''}${surname || ''}${years || ''}}`
+    setCardId(cardId)
   }, [])
   const dispatch = useAppDispatch()
   const cardRef = useRef<HTMLDivElement>(null);
-  const [, setModalPosition] = React.useState({ top: 0, left: 0 });
+
   const handleOpen = () => {
-    dispatch(handleOpenMemberDetailPopup(cardId));
+    const birthYear = years?.split('-')[0]
+    dispatch(handleOpenMemberDetailPopup({ id: cardId, data: { firstName, lastName: surname ? lastName : surname, surname, birthYear: birthYear || '' } }));
   };
 
   return (

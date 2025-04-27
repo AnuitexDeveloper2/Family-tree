@@ -1,13 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { loginAction, registerAction } from '../../actions/auth';
+import { StoredUser } from '../../../models/user/types';
 
 export interface AuthType {
     isLoginModalOpen: boolean;
     isRegisterModalOpen: boolean;
+    user?: StoredUser;
 }
 
 const initialState: AuthType = {
     isLoginModalOpen: false,
     isRegisterModalOpen: false,
+    user: undefined
 };
 
 export const authSlice = createSlice({
@@ -20,9 +24,24 @@ export const authSlice = createSlice({
         changeRegisterModalState(state, action) {
             state.isRegisterModalOpen = action.payload;
         },
+    },
+    extraReducers: (builder) => {
+        builder
+            .addCase(loginAction.fulfilled, (state, action) => {
+                state.user = action.payload?.data.user;
+                if (action.payload?.data.token) {
+                    localStorage.setItem('session', action.payload?.data.token);
+                }
+
+            })
+            .addCase(registerAction.fulfilled, (state, action) => {
+                state.user = action.payload?.data.user;
+                if (action.payload?.data.token) {
+                    localStorage.setItem('session', action.payload?.data.token);
+                }
+            })
 
     },
-    extraReducers: (builder) => { },
 });
 export const {
     changeLoginModalState,

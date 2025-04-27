@@ -31,6 +31,7 @@ const Register: FC = () => {
     const dispatch = useAppDispatch();
 
     const onChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setErrors({ firstName: '', lastName: '', email: '', password: '' })
         setState({ ...state, [event.currentTarget.name]: event.currentTarget.value })
     }
 
@@ -80,7 +81,7 @@ const Register: FC = () => {
                 <Title text="Создать Аккаунт" />
                 <RegisterInputRow>
                     <Input name="firstName" placeholder="имя" label="Имя" error={errors.firstName} onChange={onChange} />
-                    <Input name="lastName" placeholder="фамилия" type="password" label="Фамилия" error={errors.lastName} onChange={onChange} />
+                    <Input name="lastName" placeholder="фамилия" label="Фамилия" error={errors.lastName} onChange={onChange} />
                 </RegisterInputRow>
 
                 <RegisterInputRow>

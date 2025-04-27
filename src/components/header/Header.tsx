@@ -12,6 +12,10 @@ const Header: FC = () => {
     const selector = useAppSelector(state => state.authSlice);
     const dispatch = useAppDispatch()
 
+    const goToProfile = () => {
+
+    }
+
     return (
         <HeaderLayout>
             <UserHeaderSection>
@@ -22,16 +26,24 @@ const Header: FC = () => {
                     </Text>
                 </ImportantDayContainer>
 
-                <ImportantDayContainer onClick={() => dispatch(changeLoginModalState(true))}>
-                    <UserOutlined />
-                    <Text weight={400} size={14} height={18} color={blueDark01}>
-                        Войти
-                    </Text>
-                </ImportantDayContainer>
+                {selector.user ?
+                    <ImportantDayContainer onClick={() => dispatch(changeLoginModalState(true))}>
+                        <Text weight={400} size={14} height={18} color={blueDark01}>
+                            <UserOutlined />
+                            Войти
+                        </Text>
+                    </ImportantDayContainer> :
+                    <ImportantDayContainer onClick={goToProfile}>
+                        <Text weight={400} size={14} height={18} color={blueDark01}>
+                            <UserOutlined />
+                            {"Профиль"}
+                        </Text>
+                    </ImportantDayContainer>
+                }
             </UserHeaderSection>
             {selector.isLoginModalOpen && <Login />}
             {selector.isRegisterModalOpen && <Register />}
-        </HeaderLayout>
+        </HeaderLayout >
     )
 }
 
